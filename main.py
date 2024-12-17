@@ -12,6 +12,7 @@ app = FastAPI(
 
 app.include_router(ip_router)
 app.include_router(browser_router)
+
 @app.get("/")
 def root():
     """
