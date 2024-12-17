@@ -11,4 +11,5 @@ def setup_logger():
         format="%(asctime)s - %(levelname)s - %(message)s"
     )
     logger = logging.getLogger("IPRotationLogger")
+    logger = logging.getLogger("BrowserManagerLogger")
     return logger
