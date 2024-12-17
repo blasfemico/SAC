@@ -1,6 +1,0 @@
-2024/12/17-16:29:06.369 f991 Reusing MANIFEST /home/dante/Documentos/repositorio-git/SAC/profiles/2/Default/Local Storage/leveldb/MANIFEST-000001
-2024/12/17-16:29:06.374 f991 Recovering log #3
-2024/12/17-16:29:06.374 f991 Reusing old log /home/dante/Documentos/repositorio-git/SAC/profiles/2/Default/Local Storage/leveldb/000003.log 
-2024/12/17-16:33:48.690 f992 Level-0 table #5: started
-2024/12/17-16:33:48.694 f992 Level-0 table #5: 22859 bytes OK
-2024/12/17-16:33:48.696 f992 Delete type=0 #3
