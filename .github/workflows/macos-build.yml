@@ -29,7 +29,7 @@ jobs:
       # Generar el archivo .app con PyInstaller
       - name: Build .app executable
         run: |
-          pyinstaller --windowed --name main_exe --target-arch universal2 main_exe.py
+          pyinstaller --windowed --name main_exe.app --onefile main_exe.py 
 
       # Subir el archivo .app como artefacto
       - name: Upload artifact
