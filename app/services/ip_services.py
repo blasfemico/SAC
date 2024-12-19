@@ -17,7 +17,6 @@ def change_ip_and_validate():
     else:
         raise Exception("Sistema operativo no soportado")
 
-    # Validar nueva IP
     new_ip = get_public_ip()
     if not new_ip:
         raise Exception("No se pudo validar la nueva dirección IP.")

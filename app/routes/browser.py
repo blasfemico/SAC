@@ -17,13 +17,17 @@ def create_profile(profile_name: str):
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
-@router.post("/start/{profile_name}")
-def start_browser(profile_name: str):
+
+@router.post("/open-browser/{profile_name}")
+def open_browser(profile_name: str):
     """
-    Endpoint para abrir un navegador con un perfil único.
+    Abre un navegador local con un perfil único y User-Agent aleatorio.
     """
     try:
         open_browser_with_profile(profile_name)
-        return {"status": "success", "message": f"Navegador con perfil '{profile_name}' iniciado."}
+        return {
+            "status": "success",
+            "message": f"Navegador con perfil '{profile_name}' abierto localmente."
+        }
     except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+        return {"status": "error", "message": str(e)}

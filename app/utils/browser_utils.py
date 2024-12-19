@@ -64,3 +64,10 @@ def get_unique_browser(profile_name):
     print(f"[INFO] Navegador con perfil '{profile_name}' iniciado.")
     print(f"[INFO] User-Agent asignado: {user_agent}")
     return driver
+
+def get_random_user_agent():
+    """
+    Devuelve un User-Agent aleatorio utilizando fake_useragent.
+    """
+    ua = UserAgent()
+    return ua.random
