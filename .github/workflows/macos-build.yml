@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.12.2
+          python-version: 3.12.2 # Versión de Python compatible con macOS
 
       # Instalar dependencias
       - name: Install dependencies
@@ -26,14 +26,14 @@ jobs:
           pip install -r requirements.txt
           pip install pyinstaller
 
-      # Generar el ejecutable
-      - name: Build executable
+      # Generar el archivo .app con PyInstaller
+      - name: Build .app executable
         run: |
-          pyinstaller --onefile --windowed main_exe.py
+          pyinstaller --windowed --name main_exe --target-arch universal2 main_exe.py
 
-      # Subir el ejecutable como artefacto
+      # Subir el archivo .app como artefacto
       - name: Upload artifact
         uses: actions/upload-artifact@v3
         with:
-          name: macOS-executable
-          path: dist/main_exe
+          name: macOS-app
+          path: dist/main_exe.app
